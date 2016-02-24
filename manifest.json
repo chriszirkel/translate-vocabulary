@@ -14,7 +14,7 @@
     "scripts": [
       "src/background.js"
     ],
-    "persistent": true
+    "persistent": false
   },
   "content_scripts": [
     {
@@ -24,8 +24,15 @@
       "js": [
         "js/jquery/jquery.min.js",
         "src/content.js"
+      ],
+      "css": [
+        "src/overlay.css"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "src/overlay.html",
+    "src/input.html"
   ],
   "browser_action": {
     "default_title": "Inject!",
